@@ -1,0 +1,94 @@
+---
+title: "Customizing Site Appearance"
+description: "Walk through the process of adjusting appearance settings for individual websites, including per-site themes, contrast, brightness, and color tweaks. This tutorial explains how changes are stored and how to revert or fine-tune them easily."
+---
+
+## Tailoring Appearance for Individual Websites
+
+Customizing the look and feel of websites on a per-site basis empowers you to enhance readability and comfort where it matters most. This page guides you through adjusting themes, brightness, contrast, and color settings for specific websites, showing how changes are saved and how you can easily revert or fine-tune them anytime.
+
+### Understanding Per-Site Customization
+
+Dark Reader automatically applies a global dark mode or other themes, but sometimes websites require unique adjustments to look just right. Per-site appearance settings let you override global defaults for individual sites, granting precise control over:
+
+- Theme selection (dark, light, or custom)
+- Brightness levels
+- Contrast intensity
+- Sepia and grayscale filters
+- Color adjustments (hue rotation, saturation, and more)
+
+These changes are persistent and isolated to the chosen websites, ensuring a consistent experience without affecting other sites.
+
+### Before You Start
+
+Make sure you have Dark Reader installed and activated in your browser. Global settings should be configured according to your general preference, which serves as the baseline for your per-site tweaks. 
+
+Having visited the website you want to customize enhances the experience, as the interface detects context and applies settings accordingly.
+
+Learn more about initial setup and requirements in the [Installation Guide](/getting-started/quick-setup/installation-guide).
+
+### Adjusting Appearance for a Specific Website
+
+Use the built-in Dark Reader extension interface visible on the target website to make direct adjustments:
+
+<Steps>
+<Step title="Open Dark Reader Panel on the Website">
+Click the Dark Reader icon in your browser toolbar while on the target site. The panel provides controls customized for that domain.
+</Step>
+<Step title="Select the Site Tab">
+Within the panel, switch to the ‘Site’ tab to access per-site appearance settings.
+</Step>
+<Step title="Choose Theme">
+Pick a theme from dark, light, or sepia mode specifically for the website. This overrides the global theme.
+</Step>
+<Step title="Adjust Brightness and Contrast">
+Use the sliders to increase or decrease brightness and contrast until the site looks comfortable and clear.
+</Step>
+<Step title="Fine-Tune Colors">
+Modify hue rotation, grayscale, or sepia filters to correct colors that look off or to personalize the visual style.
+</Step>
+<Step title="Preview Changes Live">
+Observe the immediate effect on the website without needing to refresh, allowing you to experiment comfortably.
+</Step>
+<Step title="Save Your Customization">
+Changes are saved automatically and apply whenever you visit the site.
+</Step>
+<Step title="Revert or Reset Settings">
+If needed, use the ‘Reset site’ button to clear all customizations and revert to global defaults.
+</Step>
+</Steps>
+
+### How Your Changes Are Stored and Applied
+
+Dark Reader saves per-site settings locally within your browser’s storage, linked to the domain of the website. This approach ensures:
+
+- Customizations persist across browsing sessions
+- Settings are isolated per domain and do not bleed over
+- Easy revert or updates without affecting other websites
+
+If you clear your browser cache or extension data, these configurations will be lost, so consider exporting settings if available for backup.
+
+### Best Practices and Tips
+
+- Start with subtle adjustments; small increases in contrast or brightness often improve readability without drastic color shifts.
+- Use per-site settings when a particular website looks distorted under the global theme.
+- Regularly revisit custom settings after Dark Reader updates, as improvements may reduce the need for manual tweaks.
+- If a site changes layout or colors, resetting the site’s custom settings can sometimes resolve visual glitches.
+
+<Warning>
+Over-customization with extreme values can harm readability or legibility. Adjust settings thoughtfully to maintain user comfort.
+</Warning>
+
+### Troubleshooting Common Issues
+
+- **No changes appear on the site:** Ensure Dark Reader is enabled for the site and that you are editing the right tab ('Site' tab) in the extension panel.
+- **Colors look worse after adjustments:** Try resetting the site customization and gradually reapply settings.
+- **Settings lost after browser update:** Verify your browser’s extension data permissions and consider manual export if available.
+
+For more assistance, see [Troubleshooting Common Setup Issues](/getting-started/validation-troubleshooting/troubleshooting-setup).
+
+### Next Steps
+
+After mastering per-site appearance tuning, explore how to [Inject Custom User Scripts](/guides/advanced-use-cases/injecting-custom-scripts) for deeper control over site behavior or customize notifications in [Managing Notifications and Feedback](/guides/advanced-use-cases/notification-and-feedback).
+
+<Source url="https://github.com/darkreader/darkreader" branch="main" paths={[{"path": "src/ui/index.tsx", "range": "100-160"}]} />

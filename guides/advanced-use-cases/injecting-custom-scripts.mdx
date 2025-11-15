@@ -1,0 +1,74 @@
+---
+title: "Injecting Custom User Scripts"
+description: "Step-by-step instructions for adding, editing, and managing custom scripts that run on specific web pages through Dark Reader. Includes tips for safe script usage and troubleshooting script-related issues."
+---
+
+## Injecting Custom User Scripts with Dark Reader
+
+Custom user scripts allow you to tailor specific web pages by running your own JavaScript code alongside Dark Reader. This enhances your browsing experience by enabling automation, custom styling adjustments, or additional site-specific features that Dark Reader’s default settings don't cover.
+
+Injecting scripts is especially useful when you want to fix site behavior or appearance issues that arise with the dark mode or add personal tweaks without altering the web page source.
+
+### Preparing Your Environment for Custom Scripts
+
+Before adding any custom user scripts, ensure your Dark Reader extension is installed and running correctly in your browser. Verify you have:
+
+- The latest version of Dark Reader installed.
+- Access to the Dark Reader extension UI.
+- Basic familiarity with JavaScript and identifying relevant web pages for script injection.
+
+Refer to the [Installation Guide](/getting-started/quick-setup/installation-guide) if you need help setting up Dark Reader.
+
+<Tip>
+Injecting scripts requires careful consideration to avoid conflicts with site functionality. Always backup any important scripts before editing.
+</Tip>
+
+### How to Add and Manage Custom User Scripts
+
+<Steps>
+<Step title="Open the Dark Reader Extension">
+Click on the Dark Reader icon in your browser toolbar to open its control panel.
+</Step>
+<Step title="Access the 'Custom Scripts' Section">
+Within the Dark Reader control panel, navigate to the advanced settings area and select 'Custom Scripts' to view your current scripts or add new ones.
+</Step>
+<Step title="Create a New Script">
+Click the 'Add Script' button. Enter a unique name and specify the target web page(s) by providing URL patterns where the script should run.
+</Step>
+<Step title="Write or Paste Your JavaScript Code">
+Insert your custom script code directly into the editor. The script will execute only on matching pages.
+</Step>
+<Step title="Save and Enable the Script">
+Save your script and ensure it is toggled on to activate script injection on specified pages.
+</Step>
+<Step title="Edit or Remove Scripts as Needed">
+Return to the 'Custom Scripts' section anytime to update or delete your scripts for ongoing maintenance.
+</Step>
+</Steps>
+
+### Best Practices for Safe Script Injection
+
+- **Scope Carefully:** Limit the script execution to specific URL patterns to avoid unintended effects on unrelated sites.
+- **Test Incrementally:** Add and test scripts on single pages before widespread deployment.
+- **Use Console Logging:** Add console.log statements to debug your scripts efficiently.
+- **Avoid Manipulating Dark Reader Core Functions:** Focus on DOM changes or site-specific fixes rather than altering Dark Reader internals.
+- **Review and Update Regularly:** Websites change often; ensure your custom scripts remain compatible.
+
+### Troubleshooting Common Script Issues
+
+- **Script Does Not Run:** Verify the URL pattern matches exactly and the script is enabled.
+- **Page Breaks or Behaves Unexpectedly:** Disable the script and re-enable parts incrementally to isolate issues.
+- **Errors Shown in Browser Console:** Check script syntax and JavaScript compatibility.
+- **Conflicts with Dark Reader Theme:** Adjust your script to execute after Dark Reader has applied the theme changes.
+
+<Warning>
+Scripts with unsafe or poorly written code can degrade performance or compromise browsing security. Use caution when copying scripts from external sources.
+</Warning>
+
+### Wrapping Up: Enhance Your Browsing Experience
+
+Injecting custom user scripts expands the flexibility of Dark Reader, letting you fine-tune how dark mode interacts with the sites you care about. Mastering this feature improves both site compatibility and personal productivity.
+
+For broader customization topics, explore [Customizing Site Appearance](/guides/core-workflows/customizing-sites) or learn proper troubleshooting from [Troubleshooting Common Setup Issues](/getting-started/validation-troubleshooting/troubleshooting-setup).
+
+<Source url="https://github.com/darkreader/darkreader" paths={[{"path": "src/inject/scripts.ts", "range": "20-60"}]} />
