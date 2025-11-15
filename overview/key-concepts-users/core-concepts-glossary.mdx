@@ -1,0 +1,64 @@
+---
+title: "Core Concepts & Terminology"
+description: "Get familiar with critical terms like 'content scripts', 'background scripts', 'notifications', and 'dynamic style injection'. Understand how these high-level concepts map to real user actions in Dark Reader and form the basis of its extension model."
+---
+
+## Understanding Core Concepts in Dark Reader
+
+Dark Reader transforms your browsing experience by applying a customizable dark theme to websites. To fully harness its power, it’s essential to grasp the core concepts that underpin how the extension interacts with your browser and web pages. These foundational terms — such as content scripts, background scripts, notifications, and dynamic style injection — describe how Dark Reader operates behind the scenes to deliver seamless dark mode functionality. Understanding them helps you troubleshoot, customize, and optimize your use of Dark Reader.
+
+## Key Components and Their Roles
+
+At its heart, Dark Reader’s extension model relies on a combination of script types and mechanisms that respond to user actions and web page content:
+
+- **Content Scripts**: These scripts run within the context of web pages. They modify page appearance by injecting CSS or JavaScript to transform bright colors into darker ones, enabling live dark mode adaptations.
+
+- **Background Scripts**: Operating separately from individual web pages, background scripts manage the extension’s state and communication channels. They listen for user inputs (like toggling dark mode) and coordinate tasks like managing settings or applying changes globally.
+
+- **Notifications**: Dark Reader leverages notifications to provide feedback or alerts to users. Whether it’s informing you about updates, errors, or changes in settings, notifications keep you connected to what the extension is doing.
+
+- **Dynamic Style Injection**: Instead of static themes, Dark Reader dynamically generates and applies style rules to sites in real time. This ensures a consistent dark appearance tailored to the content and structure of each page, adapting as pages update.
+
+These concepts reflect actions you perform daily—like enabling dark mode on a favorite website or customizing its look—and how the extension accomplishes those tasks efficiently.
+
+## How These Concepts Map to User Interactions
+
+When you toggle Dark Reader on a site, a background script captures your command and signals the content script running on that page. The content script then injects the needed dark theme styles dynamically, altering colors without reloading the page. If Dark Reader needs to notify you (for example, about compatibility or update status), it does so through notifications orchestrated by the background script.
+
+This layered approach means your interaction feels smooth and immediate, even as complex style transformations happen quietly behind the scenes.
+
+### Example: Enabling Dark Mode on a Site
+```javascript
+// Background script listens for user toggle
+browser.runtime.onMessage.addListener((request) => {
+  if (request.command === 'toggleDarkMode') {
+    // Send command to content script on active tab
+    browser.tabs.sendMessage(request.tabId, { action: 'applyDarkTheme' });
+  }
+});
+```
+
+The content script receives this and injects styles to instantly switch the page to dark mode.
+
+## Practical Insights: Leveraging Core Concepts
+
+Mastering these terms allows you to:
+
+- Understand why certain sites update instantly when toggling dark mode
+- Predict when a page reload is needed or avoid unnecessary refreshes
+- Configure site-specific settings that rely on controlling content script actions
+- Debug common issues by knowing where in the extension architecture problems may occur (e.g., background script failures or injection conflicts)
+
+For advanced users, these concepts open doors to customization, such as injecting personalized scripts or enhancing notification behaviors.
+
+<Source url="https://github.com/darkreader/darkreader" paths={[{"path":"src/background/index.ts","range":"1-50"},{"path":"src/content/index.ts","range":"10-60"}]} branch="main" />
+
+## Next Steps: Building on Core Knowledge
+
+Familiarity with these core concepts lays a solid foundation for exploring Dark Reader’s full capabilities. To start experiencing the extension:
+
+- Visit the [Installation Guide](/getting-started/quick-setup/installation-guide) to set up Dark Reader.
+- Learn how to [Activate and Toggle Dark Mode](/guides/core-workflows/activating-dark-mode) across your favorite sites.
+- Dive into [Customizing Site Appearance](/guides/core-workflows/customizing-sites) to tailor dark themes perfectly.
+
+Each step builds on your understanding of how content scripts, background scripts, notifications, and style injection work together to enhance your browsing comfort and productivity.
