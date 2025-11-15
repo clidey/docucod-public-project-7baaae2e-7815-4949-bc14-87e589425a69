@@ -1,0 +1,73 @@
+---
+title: "Managing Notifications and Feedback"
+description: "How to control notification preferences, understand browser alerts, and receive feedback from Dark Reader’s notification system. This guide details enabling/disabling notifications and interpreting messages shown by the extension."
+---
+
+## Managing Notifications and Feedback in Dark Reader
+
+Dark Reader keeps you informed by sending notifications and browser alerts that guide you through its functionality and status changes. Managing these notifications efficiently lets you control the extension’s interaction with your browser and helps you respond quickly to important information without interruption.
+
+### Controlling Notification Preferences
+
+Dark Reader allows you to customize how and when it sends notifications. This ensures you receive only the alerts that matter most to you, creating a less distracting and more productive browsing experience.
+
+- **Enable or Disable Notifications:** Access the Dark Reader extension settings by clicking the extension icon in your browser toolbar, then open the preferences panel. Here, toggle the notifications setting to enable or disable alerts.
+- **Persistent vs. Temporary Alerts:** Decide whether notifications stay visible until you dismiss them or disappear automatically after a short period.
+- **Sound and Visual Cues:** Depending on your browser’s capabilities, you may configure visual alerts or sound to accompany notifications.
+- **Notification Scope:** Choose to receive alerts for mode changes, site filtering issues, or updates about feature toggling.
+
+Regularly reviewing and adjusting notification preferences ensures that you remain informed without being overwhelmed.
+
+### Understanding Browser Alerts from Dark Reader
+
+Dark Reader uses browser alerts for critical messages requiring your immediate attention or to inform you about important extension status changes.
+
+Common alert scenarios include:
+
+- **Permission Requests:** Alerts may appear when Dark Reader needs additional permissions to operate on certain websites.
+- **Error Notifications:** If Dark Reader encounters an issue activating dark mode on a site, a browser alert will notify you.
+- **Update Announcements:** Major feature updates or changes to privacy policies may trigger alerts informing users.
+
+Responding promptly to these alerts can prevent disruptions, ensuring continuous dark mode support.
+
+### Receiving and Interpreting Feedback
+
+Dark Reader provides feedback through both automated notifications and user-triggered messages, designed to help you understand the extension’s current behavior and resolve any issues.
+
+Look out for:
+
+- **Status Indicators:** Notifications that confirm when dark mode is activated or deactivated on the active site.
+- **Customization Feedback:** Messages that notify you when custom site settings or overrides are applied.
+- **Error Messages:** Details about problems applying themes, often including actionable tips or direct links to troubleshooting resources.
+
+This feedback closes the loop between your actions and the extension’s responses, improving your control and confidence over the browsing experience.
+
+### Tips for Effective Notification Management
+
+- Customize alert frequency to match your workflow, reducing unnecessary interruptions.
+- Keep browser permissions up to date to avoid unexpected permission-related alerts.
+- Use notification feedback to quickly identify sites where dark mode may not apply cleanly.
+- Regularly check for Dark Reader updates and review notification settings after major releases.
+
+<Tip>
+To quickly change notification settings, right-click the Dark Reader extension icon and select 'Options' or 'Preferences' depending on your browser.
+</Tip>
+
+### Troubleshooting Notification Issues
+
+If you do not receive expected notifications or alerts:
+
+- Verify that browser notification permissions are enabled for the Dark Reader extension.
+- Check that your browser is not suppressing notifications (consult browser notification settings).
+- Ensure you are running the latest version of Dark Reader to avoid known bugs.
+- Review Dark Reader’s log or debug console via the extension panel for error messages.
+
+<Warning>
+Disabling notifications entirely may cause you to miss important alerts about site compatibility or permission requests.
+</Warning>
+
+Dark Reader's notification system is designed to keep your browsing smooth and informed. Effective management of this system empowers you to harness Dark Reader's features without disruption.
+
+Explore related documentation for deeper control options in the [Customizing Site Appearance](/guides/core-workflows/customizing-sites) and [Activating and Toggling Dark Mode](/guides/core-workflows/activating-dark-mode) guides.
+
+<Source url="https://github.com/darkreader/darkreader" branch="main" paths={[{"path": "src/modules/notifications/index.ts", "range": "10-70"}]} />
